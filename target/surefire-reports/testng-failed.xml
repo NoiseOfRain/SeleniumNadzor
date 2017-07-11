@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [test]">
+  <test name="test(failed)">
+    <classes>
+      <class name="Selenium.Sampler">
+        <methods>
+          <include name="createTestingSertificateLimitations"/>
+          <include name="authorization"/>
+          <include name="goToTestingSertificates"/>
+          <include name="setUp"/>
+          <include name="createTestingSertificateDocuments"/>
+          <include name="createTestingSertificateClose"/>
+          <include name="tearDown"/>
+          <include name="createTestingSertificateTotalInformation"/>
+        </methods>
+      </class> <!-- Selenium.Sampler -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test] -->

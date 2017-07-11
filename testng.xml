@@ -2,7 +2,7 @@
 <suite name="test">
     <test name="test">
         <classes>
-            <class name="Selenium.Test"/>
+            <class name="Selenium.Sampler"/>
         </classes>
     </test>
 </suite>

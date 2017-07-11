@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 7.864 s <<< FAILURE! - in TestSuite
+authorization(Selenium.Sampler)  Time elapsed: 1.837 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'noise-All-Series', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-83-generic', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/tmp/rust_mozprofile.GRFW67o66giM, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=24341.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
+Session ID: a3408df7-d02b-4f7c-996f-266430c14422
+	at Selenium.Sampler.authorization(Sampler.java:61)
+
+tearDown(Selenium.Sampler)  Time elapsed: 1.924 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'noise-All-Series', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-83-generic', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/tmp/rust_mozprofile.GRFW67o66giM, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=24341.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
+Session ID: a3408df7-d02b-4f7c-996f-266430c14422
+	at Selenium.Sampler.tearDown(Sampler.java:266)
+
