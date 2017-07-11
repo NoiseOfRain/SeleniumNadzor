@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="selenium-java-3.4.0">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/selenium-java-3.4.0.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
