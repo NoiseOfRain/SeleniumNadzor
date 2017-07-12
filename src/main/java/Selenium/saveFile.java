@@ -2,6 +2,8 @@ package Selenium;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import static Selenium.variablesNadzor.documentWay;
@@ -23,7 +25,7 @@ public class saveFile {
                 numberLines++;
             }
 
-            writer.write(numberLines + ") " + Sampler.ackNumber+"\n");
+            writer.write(numberLines + ") " + Sampler.ackNumber + " " + new SimpleDateFormat("dd.MM.yyyy").format(new Date()) + "\n");
             writer.close();
 
         } catch (Exception e) {
