@@ -1,4 +1,6 @@
-package Selenium;
+package Selenium.logging;
+
+import Selenium.TestAct.Sampler;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,9 +13,9 @@ import static Selenium.variablesNadzor.documentWay;
 /**
  * Created by noise on 14.06.17.
  */
-public class saveFile {
+public class saveDocument {
 
-    public static void saveTest() {
+    public static void saveActNumber() {
 
         int numberLines = 1;
 

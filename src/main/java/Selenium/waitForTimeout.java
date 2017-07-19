@@ -1,9 +1,11 @@
 package Selenium;
 
+import Selenium.logging.screenShot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
-import static Selenium.Sampler.driver;
+
+import static Selenium.chooseBrowser.testingBrowser.driver;
 import static org.junit.Assert.fail;
 
 /**
@@ -14,7 +16,7 @@ public class waitForTimeout {
     By firstThing;
     By secondThing;
 
-    waitForTimeout() throws Exception {
+    public waitForTimeout() throws Exception {
 
         for (int second = 0; ; second++) {
             if (second >= 60) {
@@ -28,7 +30,7 @@ public class waitForTimeout {
         }
     }
 
-    waitForTimeout(By firstThing) throws Exception {
+    public waitForTimeout(By firstThing) throws Exception {
         this.firstThing = firstThing;
 
         for (int second = 0; ; second++) {
@@ -45,7 +47,7 @@ public class waitForTimeout {
         }
     }
 
-    waitForTimeout(By firstThing, By secondThing) throws Exception {
+    public waitForTimeout(By firstThing, By secondThing) throws Exception {
         this.firstThing = firstThing;
         this.secondThing = secondThing;
 

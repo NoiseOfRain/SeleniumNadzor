@@ -1,4 +1,4 @@
-package Selenium;
+package Selenium.logging;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-import static Selenium.Sampler.driver;
+
+import static Selenium.chooseBrowser.testingBrowser.driver;
 import static Selenium.variablesNadzor.screenshotsWay;
 
 

@@ -1,16 +1,13 @@
-package Selenium;
+package Selenium.TestAct;
 
 
+import Selenium.chooseBrowser.testingBrowser;
+import Selenium.logging.saveDocument;
+import Selenium.logging.screenShot;
+import Selenium.variablesNadzor;
+import Selenium.waitForTimeout;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
-
 
 import static Selenium.waitForTimeout.isElementPresent;
 import static org.junit.Assert.fail;
@@ -19,36 +16,10 @@ import static org.junit.Assert.fail;
 /**
  * Created by noise on 30.05.17.
  */
-public class Sampler {
-
-    static protected WebDriver driver;
+public class Sampler extends testingBrowser {
 
 //создание переменной акта проверки
     static public String ackNumber;
-
-    @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
-//указываю где лежит драйвер для браузера
-        System.setProperty(variablesNadzor.browserFirefox, variablesNadzor.geckodriver);
-//указываю путь к профилю с настройками браузера
-        FirefoxProfile profile = new FirefoxProfile(variablesNadzor.profile);
-//запуск браузера
-        driver = new FirefoxDriver(profile);
-//развернуть во весб экран
-        driver.manage().window().maximize();
-//устанавливаю время ожидания для окон
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//уточнить
-//переход на нужную ссылку
-        driver.get(variablesNadzor.URL);
-
-
-        screenShot.screen(new Exception().getStackTrace()[0].getMethodName());
-
-        /*
-        * Необходимо отключить скачивание адднонов
-        * addons.productaddons
-        */
-    }
 
     @Test(priority = 1)
     public void authorization() throws Exception {
@@ -74,7 +45,7 @@ public class Sampler {
 //ожидание загрузки ЕИС
         new waitForTimeout();
 
-        screenShot.screen(new Exception().getStackTrace()[0].getMethodName());
+
     }
 
     @Test (priority = 2, dependsOnMethods = {"authorization"})
@@ -256,13 +227,10 @@ public class Sampler {
 
         System.out.println(ackNumber);
 
-        saveFile.saveTest();
+        saveDocument.saveActNumber();
 
         screenShot.screen(new Exception().getStackTrace()[0].getMethodName());
     }
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
+
 }

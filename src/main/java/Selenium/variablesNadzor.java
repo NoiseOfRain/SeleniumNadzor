@@ -2,8 +2,6 @@ package Selenium;
 
 import org.openqa.selenium.By;
 
-import java.io.File;
-
 /**
  * Created by noise on 02.06.17.
  *
@@ -14,12 +12,6 @@ public class variablesNadzor {
     /**
      * Глобальные переменные
      */
-//драйвер для firefox
-    public static String browserFirefox = "webdriver.gecko.driver";
-//путь к драйверу firefox
-    public static String geckodriver =  "/home/noise/geckodriver";
-//путь до профиля firefox
-    public static File profile = new File("/home/noise/.mozilla/firefox/l6itpyq2.SeleniumTestNadzor");
 
 //URL куда переходить
     public static String URL = "https://security.gibdd.local:8282/cas/login?service=http%3A%2F%2Fnadzor.gibdd.local%2Fais_eip_nadzor";
